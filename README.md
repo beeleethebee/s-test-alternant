@@ -14,9 +14,9 @@
   - You are asked to build a simple Quizz App
 
 ## User
- [ ] A user can log in with a valid username and password through a login screen
+ [X] A user can log in with a valid username and password through a login screen
 
- [ ] A user can see a collection of quizzes
+ [X] A user can see a collection of quizzes
 
  [ ] A user can start a quizz
 
@@ -26,7 +26,7 @@
 
 
 ## Quizz
- [ ] A quizz has a Title
+ [X] A quizz has a Title
 
  [ ] A quizz has a maximum of 3 questions
 
@@ -41,6 +41,6 @@
 ## Bonus
 - Some nice to haves, when there is time to spare.
 
- [ ] A quizz can have a dificulty level
+ [X] A quizz can have a dificulty level
 
  [ ] Add or improve a feature of your own choice
