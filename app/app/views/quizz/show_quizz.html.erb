@@ -1,0 +1,24 @@
+<h1><%= @quizz.title %></h1>
+<h3>
+  Tu es prêt à repondre à ce<% if @questions.length == 1 %>tte question<% else %>s <%= @questions.length %> questions !<%end %>
+</h3>
+
+<ul>
+  <% @questions.each do |question | %>
+    <li>
+      <h4><%= question.name %></h4>
+      <ol>
+        <% question.get_answers.each do |answer| %>
+          <li>
+            <input type="radio" id="" name="<%= question %>" value="<%= answer %>">
+            <label for="<%= question %>" > <%=answer %> </label>
+          </li>
+        <%end %>
+      </ol>
+    </li>
+
+  <% end %>
+</ul>
+
+<br />
+<a href="/">Revenir en arrière</a>

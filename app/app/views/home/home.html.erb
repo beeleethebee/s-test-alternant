@@ -9,10 +9,9 @@
   <h2>Liste des différents quizz:</h2>
   <ul>
     <% @quizzs.each do |quizz| %>
-      <a href="TODO">
+      <a href="/quizz/<%=quizz.id%>">
         <li>
-          <p><%= quizz.title %> | <%= quizz.difficulty.name %> </p>
-
+          <p><%= quizz.title %> | <%= quizz.difficulty.name %>  </p>
         </li>
       </a>
     <% end %>

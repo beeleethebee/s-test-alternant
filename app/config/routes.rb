@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/register'  =>  'user#register'
   post '/register' =>  'user#register_form'
 
+  get '/quizz/:id' => 'quizz#show_quizz'
+
   get '/signout' => 'user#signout'
   get '/' => 'home#home'
 

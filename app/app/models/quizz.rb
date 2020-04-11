@@ -12,4 +12,15 @@ class Quizz < ActiveRecord::Base
     Difficulty.find(difficulty_id)
   end
 
+  def get_questions
+    questions = [question1]
+    if question2
+      questions.append(question2)
+    end
+    if question3
+      questions.append(question3)
+    end
+    questions
+  end
+
 end
