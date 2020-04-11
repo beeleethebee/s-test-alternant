@@ -3,22 +3,24 @@
   Tu es prêt à repondre à ce<% if @questions.length == 1 %>tte question<% else %>s <%= @questions.length %> questions !<%end %>
 </h3>
 
-<ul>
+<%= form_tag "/quizz/#{@quizz.id}", method: :post do %>
+  <ul>
   <% @questions.each do |question | %>
     <li>
       <h4><%= question.name %></h4>
       <ol>
         <% question.get_answers.each do |answer| %>
           <li>
-            <input type="radio" id="" name="<%= question %>" value="<%= answer %>">
-            <label for="<%= question %>" > <%=answer %> </label>
+            <input type="radio" id="answer" name="<%= "question#{@questions.index(question)}" %>" value="<%= answer %>">
+            <label for="answer" > <%=answer %> </label>
           </li>
         <%end %>
       </ol>
     </li>
-
   <% end %>
-</ul>
+  </ul>
+  <input type="submit" value="valider"/>
+<% end %>
 
 <br />
 <a href="/">Revenir en arrière</a>

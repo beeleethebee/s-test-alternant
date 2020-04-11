@@ -18,9 +18,9 @@
 
  [X] A user can see a collection of quizzes
 
- [ ] A user can start a quizz
+ [X] A user can start a quizz
 
- [ ] A user can answer 3 questions on a quizz
+ [X] A user can answer 3 questions on a quizz
 
  [ ] A user can see the scores of his quizzes
 

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/register' =>  'user#register_form'
 
   get '/quizz/:id' => 'quizz#show_quizz'
+  post '/quizz/:id' => 'quizz#validate_quizz'
 
   get '/signout' => 'user#signout'
   get '/' => 'home#home'
