@@ -1,0 +1,25 @@
+<% if !@current_user %>
+
+  <a href="/login">Se connecter</a> <br />
+  <a href="/register">S'enregistrer</a>
+
+<% else %>
+  <%= flash[:info]%>
+  <p>Bienvenue <%= @current_user.login %></p>
+  <h2>Liste des différents quizz:</h2>
+  <ul>
+    <% @quizzs.each do |quizz| %>
+      <a href="TODO">
+        <li>
+          <p><%= quizz.title %> | <%= quizz.difficulty.name %> </p>
+
+        </li>
+      </a>
+    <% end %>
+  </ul>
+  <br />
+  <a href="/signout">Se deconecter</a>
+
+<% end %>
+
+

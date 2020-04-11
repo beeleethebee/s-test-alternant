@@ -1,0 +1,9 @@
+<h1>S'enregistrer</h1>
+<%= flash[:info] %>
+<%= form_tag "/register", method: :post do %>
+  <input type="text" name="login"/>
+  <input type="password" name="password"/>
+  <input type="submit" name="Valider"/>
+<% end %>
+
+<a href="/login">Vous avez un compte ?</a>
