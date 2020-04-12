@@ -1,0 +1,22 @@
+<h1>Page d'édition de quizz</h1>
+<h2><%= @quizz.title %>: </h2>
+
+<ul>
+  <% @questions.each do |question | %>
+    <li>
+      <h4><%= question.name %></h4>
+      <a href="/admin/question/<%= question.id %>">Editer</a>
+      <ol>
+        <% question.get_answers.each do |answer| %>
+          <li>
+            <label for="answer" > <%=answer %> </label>
+          </li>
+        <%end %>
+      </ol>
+    </li>
+  <% end %>
+</ul>
+<% if @questions.length <= 2 %>
+  <a href="/admin/question/0">+</a><br/>
+<% end %>
+<a href="/admin">Revenir en arrieère</a>

@@ -1,4 +1,4 @@
 class Scoreboard < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :questions
+  has_many :users
+  has_many :quizz
 end

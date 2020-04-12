@@ -1,0 +1,13 @@
+<h1>
+  <%= @question.persisted? ? "Édition de questions:" : "Création de questions:" %>
+</h1>
+<% if @question.persisted? %>
+  <%= form_tag "/admin/question/#{@question.id}", method: :put do %>
+    <%= render "admin/question_form" %>
+  <% end %>
+
+<% else %>
+  <%= form_tag "/admin/question", method: :post do %>
+    <%= render "admin/question_form" %>
+  <% end %>
+<% end %>

@@ -5,12 +5,16 @@ class Question < ActiveRecord::Base
 
   def get_answers
     questions = [good_answer,bad_answer1]
-    if bad_answer2
+    if bad_answer2 && !bad_answer2.blank?
       questions.append(bad_answer2)
     end
-    if bad_answer3
-      questions.append(bad_answer2)
+    if bad_answer3 && !bad_answer3.blank?
+      questions.append(bad_answer3)
     end
-    questions.shuffle
+    questions
+  end
+
+  def get_answers_shuffle
+    self.get_answers.shuffle
   end
 end
