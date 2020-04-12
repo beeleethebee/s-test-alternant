@@ -7,4 +7,11 @@ class ScoreController < ApplicationController
     end
     @quizz = Quizz.find(params[:id])
   end
+
+  def show_scoreboard
+    unless User.find(session[:user_id]).isAdmin
+      head :forbidden
+    end
+    @top = User.order(points: :desc ).limit(10)
+  end
 end

@@ -19,7 +19,13 @@ class AdminController < ApplicationController
   end
 
   def update_quizz
+  end
 
+  def display_quizz
+    quizz = Quizz.find(params[:id])
+    quizz.display = not(quizz.display)
+    quizz.save
+    redirect_to '/admin'
   end
 
   def admin_question

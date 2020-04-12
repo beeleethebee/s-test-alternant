@@ -44,5 +44,3 @@
  [X] A quizz can have a dificulty level
 
  [ ] There is a leaderboard that shows users with most points
- 
- [ ] There is an admin role who allows the user to CRUD quizzes and questions

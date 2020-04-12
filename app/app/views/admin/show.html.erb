@@ -8,9 +8,10 @@
   <% @quizzs.each do |quizz| %>
       <li>
         <p>
-          <a href="/admin/quizz/<%=quizz.id%>"><%= quizz.title %></a>
-          |
-          <%= form_tag "/admin/quizz/#{quizz.id}", method: :delete do %><input type="submit" value="X"><% end %>
+          <%= quizz.title %>
+          <a href="/admin/quizz/<%=quizz.id%>">Editer</a>
+          <a href="/admin/quizz/<%=quizz.id%>/display"><%= quizz.display ? "Masquer" : "Afficher" %></a>
+          <%= form_tag "/admin/quizz/#{quizz.id}", method: :delete do %><input type="submit" value="Supprimer"><% end %>
         </p>
       </li>
   <% end %>

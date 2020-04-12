@@ -5,15 +5,17 @@
 
 <% else %>
   <%= flash[:info]%>
-  <p>Bienvenue <%= @current_user.login %>, votre score est de <%= @current_user.points <= 0 ? 0: @current_user.points %> points !</p>
+  <h5>Bienvenue <%= @current_user.login %>, votre score est de <%= @current_user.points <= 0 ? 0: @current_user.points %> points !</h5>
   <h2>Liste des différents quizz:</h2>
     <ul>
       <% @quizzs.each do |quizz| %>
           <li>
             <p>
               <a href="/quizz/<%=quizz.id%>">
-                <%= quizz.title %> | <%= quizz.difficulty.name %>
+                <%= quizz.title %>
               </a>
+              |
+              <%= quizz.difficulty.name %>
             <%= @current_user.has_done_Quizz(quizz.id) ? '✔︎' : '✖︎' %>
             </p>
           </li>
@@ -23,6 +25,7 @@
   <% if @current_user.role === 'admin' %>
     <a href="/admin">Editer</a> <br/>
   <% end %>
+  <a href="/scoreboard">Scoreboard</a><br/>
   <a href="/signout">Se deconecter</a>
 <% end %>
 

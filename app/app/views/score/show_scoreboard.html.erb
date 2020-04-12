@@ -1,0 +1,9 @@
+<h1>Classement des joueurs ayant le plus de points:</h1>
+<ol>
+  <% @top.each do |user|  %>
+    <li>
+      <%= user.login %> : <%= user.points %> points.
+    </li>
+  <% end %>
+</ol>
+<a href="/">Revenir en arrière</a>

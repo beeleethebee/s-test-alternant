@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_11_090808) do
+ActiveRecord::Schema.define(version: 2020_04_12_174418) do
 
   create_table "difficulties", force: :cascade do |t|
     t.string "name", null: false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_04_11_090808) do
     t.integer "question_3_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "display", default: false
   end
 
   create_table "scoreboards", force: :cascade do |t|

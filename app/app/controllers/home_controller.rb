@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 
   def home
     if get_user
-      @quizzs = Quizz.all
+      @quizzs = Quizz.where('display' => true)
     end
 
   end
