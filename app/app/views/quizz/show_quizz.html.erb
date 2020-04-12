@@ -8,7 +8,7 @@
     <li>
       <h4><%= question.name %></h4>
       <ol>
-        <% question.get_answers.each do |answer| %>
+        <% question.get_answers_shuffle.each do |answer| %>
           <li>
             <input type="radio" id="" name="<%= "question#{@questions.index(question)}" %>" value="<%= answer %>">
             <label for="<%= question %>" > <%=answer %> </label>

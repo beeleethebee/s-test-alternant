@@ -1,5 +1,12 @@
-## Setup
- TO BE COMPLETED
+# Setup
+###Versions:
+  - ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-darwin18]
+  - Rails 6.0.2.1
+###Launch the app
+- Pay special attention to your versions of Ruby and Rails
+- After cloning the repository, go inside app and run `bundle install`
+- Runing migration with `rake db:migrate` and seed some data with `rails db:seed`
+- Start server with `rails s` and go at your `http://localhost:3000` 
 
 ## Guidelines
 - Fork this repository
@@ -43,4 +50,4 @@
 
  [X] A quizz can have a dificulty level
 
- [ ] There is a leaderboard that shows users with most points
+ [X] There is a leaderboard that shows users with most points

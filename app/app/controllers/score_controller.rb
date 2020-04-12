@@ -9,7 +9,7 @@ class ScoreController < ApplicationController
   end
 
   def show_scoreboard
-    unless User.find(session[:user_id]).isAdmin
+    unless User.find(session[:user_id])
       head :forbidden
     end
     @top = User.order(points: :desc ).limit(10)
